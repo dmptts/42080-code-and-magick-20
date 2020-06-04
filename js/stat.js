@@ -53,7 +53,7 @@ window.renderStatistics = function (ctx, players, times) {
     var barX = CLOUD_X + CLOUD_PADDING + (BAR_WIDTH + BAR_GAP) * index;
     var barY = CLOUD_Y + HEADING_HEIGHT + BAR_MAX_HEIGHT - barHeight;
 
-    ctx.fillStyle = getBarColor(players[i]);
+    ctx.fillStyle = getBarColor(players[index]);
 
     ctx.fillRect(barX, barY, BAR_WIDTH, barHeight);
 
