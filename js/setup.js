@@ -42,7 +42,7 @@ var createWizard = function (wizard) {
 var renderWizards = function (wizardsQuantity) {
   generateWizardsArr(wizardsQuantity);
 
-  for (var i = 0; i <= wizardsQuantity - 1; i++) {
+  for (var i = 0; i < wizardsQuantity; i++) {
     fragment.appendChild(createWizard(wizardsData[i]));
   }
 
