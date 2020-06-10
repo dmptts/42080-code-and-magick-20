@@ -15,8 +15,8 @@ var getRandomArrIndex = function (arrLength) {
   return Math.floor(Math.random() * arrLength);
 };
 
-var generateWizardData = function (index) {
-  wizardsData[index] = {
+var generateWizardData = function () {
+  return {
     name: WIZARD_NAMES[getRandomArrIndex(WIZARD_NAMES.length)] + ' ' + WIZARD_SURNAMES[getRandomArrIndex(WIZARD_SURNAMES.length)],
     coatColor: WIZARD_COAT_COLORS[getRandomArrIndex(WIZARD_COAT_COLORS.length)],
     eyesColor: WIZARD_EYES_COLORS[getRandomArrIndex(WIZARD_EYES_COLORS.length)]
@@ -24,8 +24,8 @@ var generateWizardData = function (index) {
 };
 
 var generateWizardsArr = function (wizardsQuantity) {
-  for (var i = 0; i <= wizardsQuantity - 1; i++) {
-    generateWizardData(i);
+  for (var i = 0; i < wizardsQuantity; i++) {
+    wizardsData[i] = generateWizardData();
   }
 };
 
